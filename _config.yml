@@ -1,0 +1,6 @@
+name: ticat.nagites.com
+markdown: kramdown
+highlighter: pygments
+baseurl:
+permalink: pretty
+description: Welcome to the Ticat documentation. Here you can find out how to use the hosted version.

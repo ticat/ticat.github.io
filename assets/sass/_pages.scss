@@ -1,0 +1,116 @@
+/* Inner pages */
+
+.page-title {
+    background-color: $colour_dark_blue;
+    color: #fff;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    @media (min-width: $large-screen) {
+        padding-top: 3em;
+        margin-bottom: 3em;
+    }
+}
+
+.page-title--inner-page {
+    h1 {
+        /*
+         * Make the page heading follow the left-line of the main content
+         * These margin widths correspond to the width of .column-navigation on inner pages
+         */
+        @media (min-width: $large-screen) {
+            margin-left: 23%;
+        }
+        @media (min-width: $huge-screen) {
+            margin-left: 20%;
+        }
+     }
+}
+
+.layout-inner-page {
+    @include clearfix;
+    margin-bottom: 3em;
+    .column-content {
+        @media (min-width: $large-screen) {
+            width: 77%;
+            float: right;
+        }
+        @media (min-width: $huge-screen) {
+            width: 60%;
+            margin-right: 20%;
+        }
+    }
+    .column-navigation {
+        @media (min-width: $large-screen) {
+            width: 19%;
+            float: left;
+            margin-right: 4%;
+        }
+        @media (min-width: $huge-screen) {
+            width: 16%;
+        }
+    }
+}
+
+.inner-navigation {
+    background-color: lighten($colour_light_grey, 2.5%);
+    padding: 0.5em 1em;
+    @media (min-width: $medium-screen) {
+        padding: 1em 2em;
+        margin-top: 2em;
+    }
+    @media (min-width: $large-screen) {
+        background-color: transparent;
+        padding: 0;
+        margin-top: 0;
+    }
+    ul {
+        @extend .unstyled-list;
+        ul {
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    > ul {
+        @media (min-width: $medium-screen) and (max-width: $large-screen) {
+            @include columns;
+        }
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin: 0;
+        color: lighten($colour_black, 20%);
+        margin-top: 0.5em;
+    }
+    a {
+        display: block;
+        color: $colour_dark_grey;
+        padding: 0.2em 0;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $colour_black;
+        }
+        h2 {
+            color: $colour_black;
+        }
+    }
+}
+
+.main {
+    @media (min-width: $medium-screen) and (max-width: $large-screen) {
+        padding-left: 3em;
+        padding-right: 3em;
+        font-size: 1.125em;
+    }
+    section {
+        margin: 1em 0;
+        border-bottom: 1px solid $colour_borders;
+        @media (min-width: $medium-screen) {
+            margin: 2em 0;
+            padding: 0 0 1em;
+        }
+    }
+}
